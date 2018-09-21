@@ -1,0 +1,11 @@
+FROM microsoft/mssql-server-linux:2017-latest
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY ./local-env/database /usr/src/app
+
+RUN chmod +x /usr/src/app/create-database.sh
+
+CMD /bin/bash /usr/src/app/entrypoint.sh
+

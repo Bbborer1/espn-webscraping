@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: local-env/database/Dockerfile.database
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Ready2go

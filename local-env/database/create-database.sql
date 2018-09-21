@@ -1,0 +1,3 @@
+Create Database FantasyFootball;
+
+Go
